@@ -43,6 +43,13 @@ int _printf(const char *format, ...)
 		       		putchar('%');
 				count++;
 			}
+			else if (*format == 'd' || *format == 'i')
+			{
+				int num = va_arg(args, int);
+				printf("%d", num);
+				count++;
+			}
+
 		}
 		else
 			{
